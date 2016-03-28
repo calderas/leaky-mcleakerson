@@ -54,8 +54,7 @@ export function profile() {
     console.timeStamp(testModule, "startApp");
   }
 
-  if (window.gc) {
-    // window.gc();
+  if (window.performance.memory) {
     window._profiling.delta = window.performance.memory.usedJSHeapSize - window._profiling.lastUsedHeap;
     window._profiling.lastUsedHeap = window.performance.memory.usedJSHeapSize;
 
